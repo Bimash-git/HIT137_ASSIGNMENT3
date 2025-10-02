@@ -25,7 +25,7 @@ class MainWindow:
         self._job_q: queue.Queue = queue.Queue()
         self._last_result = None
         self._busy = False
-        self.root.after(100, self._poll_job_queue)  # check job queue every 100ms
+        self.root.after(75, self._poll_job_queue)  # check job queue every 100ms
 
         # ----- top bar with title, task selector, theme selector, and status -----
         top = ttk.Frame(self.root); top.pack(fill=tk.X, padx=10, pady=(10,6))
